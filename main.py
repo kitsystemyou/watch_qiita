@@ -26,12 +26,9 @@ if page_view < 10000:
     tweet = "1万 view まであと" + str(10000 - page_view) + "view !\n" + res_data["url"]
     print(tweet)
     api.update_status(status=tweet)
-    print("sudoori")
 
-elif page_view == 10000:
+elif page_view >= 10000:
     tweet = "1万 view 達成！！" + res_data["url"]
     api.update_status(status=tweet)
     print(tweet)
-else:
-    pass
 print("end")
