@@ -8,6 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
       API_KEY: ${{ secrets.API_KEY }}
       API_KEY_SECRET: ${{ secrets.API_KEY_SECRET }}
       ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
