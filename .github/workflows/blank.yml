@@ -2,7 +2,7 @@ name: Watch_qiita
 
 on:
   schedule:
-    - cron: '*/10 * * * *' # cronで定期実行
+    - cron: '0 6 * * *' # cronで定期実行
 
 jobs:
   build:
