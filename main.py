@@ -15,20 +15,15 @@ if res.status_code != 200:
     print(res.status_code, res.json())
 
 res_data = res.json()
-print(res_data["id"])
-print(res_data["page_views_count"])
-print(res_data["url"])
-
 page_view = int(res_data["page_views_count"])
 
-if page_view < 10000:
-    print(10000 - page_view)
-    tweet = "1万 view まであと" + str(10000 - page_view) + "view !\n" + res_data["url"]
+if page_view < 15000:
+    tweet = "1万5千 view まであと" + str(15000 - page_view) + "view \n" + res_data["url"]
     print(tweet)
     api.update_status(status=tweet)
 
-elif page_view >= 10000:
-    tweet = "1万 view 達成！！" + res_data["url"]
-    api.update_status(status=tweet)
+elif page_view >= 15000:
+    tweet = "1万5千 view 達成！！" + res_data["url"]
     print(tweet)
-print("end")
+    api.update_status(status=tweet)
+print("finish job")
