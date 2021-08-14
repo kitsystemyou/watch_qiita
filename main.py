@@ -23,7 +23,7 @@ if page_view < 15000:
     api.update_status(status=tweet)
 
 elif page_view >= 15000:
-    tweet = "1万5千 view 達成！！" + res_data["url"]
+    tweet = "1万5千 view 達成！！ 🎊" + res_data["url"]
     print(tweet)
     api.update_status(status=tweet)
 print("finish job")
